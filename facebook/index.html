@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .login-container {
+            width: 360px;
+            padding: 40px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 30px;
+            color: #1877f2; /* Facebook blue color */
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #1877f2; /* Facebook blue color */
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0e5aaf; /* Darker shade of Facebook blue */
+        }
+        .facebook-logo {
+            margin-bottom: 20px;
+        }
+        .break-line {
+            margin-top: 20px;
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+            width: 100%;
+            overflow: visible;
+            text-align: center;
+        }
+        .break-line::before,
+        .break-line::after {
+            display: inline-block;
+            position: relative;
+            top: -6px;
+            padding: 0 10px;
+            background-color: #fff;
+        }
+        .create-account-button {
+            background-color: #42b72a; /* Green color */
+            color: white;
+            padding: 14px 20px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .create-account-button:hover {
+            background-color: #2f7c1e; /* Darker shade of green */
+        }
+        .flex-container {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the flex items */
+        }
+        .flex-item {
+            flex-basis: calc(50% - 20px); /* Set initial size of each flex item */
+            text-align: center;
+            box-sizing: border-box;
+            h1{
+              text-align: left;
+            }
+            p{
+              text-align: left;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .flex-item {
+                flex-basis: calc(100% - 20px); /* Set flex basis to full width */
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item" style=" margin: auto;" >
+      <h1 style=" font-size: 3.5rem; color:#1877f2; margin-bottom: 0px;" >facebook</h1>
+      <p style=" font-size: 2rem; margin-top: 0px;" >Facebook helps you connect and share with the people in your life.</p>
+    </div>
+    <div class="flex-item">
+      <div class="login-container" style=" margin-right: 2rem;" >
+          <h2>Login to Your Account</h2>
+          <form action="your-authentication-endpoint" method="POST">
+              <input type="text" name="username" placeholder="Email address or Phone number" required>
+              <br>
+              <input type="password" name="password" placeholder="Password" required>
+              <br>
+              <input type="submit" value="Login" style=" width: 100%;"  >
+          </form>
+          <a href="page03.html" class="forgot-password-link">Forgot Password?</a>
+          <hr class="break-line">
+          <button class="create-account-button" onclick="window.location.href='page02.html'"><strong>Create new Account</strong></button>
+      </div>
+        <p style=" text-align: center;"><strong>Create a Page</strong> for a celebrity, brand or business.</p>
+    </div>
+  </div>
+
+</body>
+</html>

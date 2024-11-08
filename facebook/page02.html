@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .signup-container {
+            width: 360px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            h2 {
+                margin-bottom: 30px;
+                text-align: left;
+            }
+        }
+
+        input[type="text"], input[type="password"], input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+        button[type="submit"] {
+            background-color: #42b72a; /* Green color */
+            color: white;
+            padding: 14px 20px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #2f7c1e; /* Darker shade of green */
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2 style=" color:black; margin: 0px;" >Sign Up</h2>
+        <p style=" text-align: left; color: grey;margin-top: 3px; ">It's quick and easy</p>
+          <hr class="break-line">
+        <form action="your-signup-endpoint" method="POST">
+            <input type="text" name="first_name" placeholder="First Name" style=" width: 49%;  "  required>
+            <input type="text" name="surname" placeholder="Surname" style=" width: 49%;" required>
+            <br>
+            <input type="text" name="mobile_number" placeholder="Mobile number or email address " required>
+            <br>
+            <input type="password" name="password" placeholder="New password" required>
+            <br>
+            <p style=" text-align: left; font-size:0.7rem; color:grey;" >Date of birth</p>
+            <input type="date" name="" value="">
+            <br>
+            <p style="text-align: left; font-size: 0.7rem; color: grey;">Gender</p>
+      <div style="display: flex; justify-content: space-between; ">
+          <div style="border: 1px solid #000; height: 20px; width: 31%;">
+              <label for="male">Male</label>
+              <input type="radio" id="male" name="gender" value="male" required>
+          </div>
+          <div style="border: 1px solid #000; height: 20px; width: 31%;">
+              <label for="female">Female</label>
+              <input type="radio" id="female" name="gender" value="female" required>
+          </div>
+          <div style="border: 1px solid #000; height: 20px; width: 31%;">
+              <label for="other">Other</label>
+              <input type="radio" id="other" name="gender" value="other" required>
+          </div>
+      </div>
+      <p style="color: grey; font-size: 0.8rem; text-align: left;">People who use our service may have uploaded your contact information to Facebook.<span style=" color: #1877f2;"> Learn more.</span></p>
+      <p style="color: grey; font-size: 0.8rem; text-align: left;">
+By clicking Sign Up, you agree to our <span style=" color: #1877f2;"> Terms, Privacy Policy</span> and <span style=" color: #1877f2;">Cookies Policy.</span> You may receive SMS notifications from us and can opt out at any time.
+
+</p>
+
+            <br>
+            <button type="submit" name="button" style="width: 50%;"  ><strong>Sign Up</strong></button>
+        </form>
+    </div>
+</body>
+</html>
